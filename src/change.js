@@ -106,6 +106,7 @@ angular.module('ajoslin.mobile-navigate')
         boundElement && boundElement.unbind(ANIMATION_END, done);
         next.removeClass(nextClasses);
         prev && prev.removeClass(prevClasses);
+        $rootScope.$broadcast("mobile-nav-page-changed");
       });
 
       //Let the user of change 'cancel' to finish transition early if they wish
